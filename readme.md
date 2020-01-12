@@ -2,6 +2,10 @@
 
 This repo represents my solution for an search bar based on some formated results.
 
+In order to run the search bar you have to have some sort of web-server.
+
+In my opinion, the easiest way to pull out results is to use Visual Studio Code as a text-editor and install  the [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
 First the users enter what they want to search in the search input. There is a delay of 0.4 seconds `let doneTypingInterval = 400;  //time in ms` until javascript comes in place. 
 
 After those 0.4 seconds a function named **doneTyping** is called to check if user has entered more than two characters in order to create an async search to our data. 
