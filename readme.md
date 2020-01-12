@@ -34,17 +34,12 @@ A function named outputHtml is called so we can pass our array to html elements.
    `
    const outputHtml = matches => {
     if (matches.length > 0) {
-
         const html = matches.map(match => 
         <li onclick="changeSearchText('${match.name}')" class="mb-2 mt-2">
             ${match.name}
         </li>
         ).join('');
-
         matchList.innerHTML = html;
-
-
-
     }
 };`
 
