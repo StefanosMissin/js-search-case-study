@@ -18,4 +18,4 @@ Another parameter is the width of the screen so we can narrow down the results c
     }`
     
 Now, a query to our service is created with 3 parameters. Our user's search value, browser language and results count.
-`let link = \`http://35.180.182.8/search?keywords=${search.value}&language=${langRes}&limit=${limitRes}\`;`
+`let link = http://35.180.182.8/search?keywords=${search.value}&language=${langRes}&limit=${limitRes};`
