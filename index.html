@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Web Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div id="banner" class="col-lg-2 col-md-12 col-sm-12">
+                <img src="images/banner.jpg" alt="" srcset="">
+            </div>
+            <div id="logo" class="col-lg-2 col-md-12 col-sm-12">
+                <img src="images/xe-logo.png" alt="" srcset="">
+            </div>
+            <div id="info-area" class="col-lg-8 col-md-12 col-sm-12">
+                <h4 class="mb-3">
+                    What place are you looking for?
+                </h4>
+                <div id="searchArea">
+                    <i class="fa fa-search icon"></i>
+                    <input type="text" id="search" class="form-control input-field">
+                </div>
+
+                <div id="matchListDiv">
+                    <ul id="matchList"> </ul>
+                </div>
+                <button class="btn btn-primary mt-1" onclick="gSearchit()">Click to Search</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+
+        function gSearchit() {
+            let txtSearch = document.getElementById("search").value;
+            window.open('http://google.com/search?q=' + txtSearch);
+        }
+
+    </script>
+</body>
+
+</html>
