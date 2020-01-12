@@ -4,7 +4,7 @@ const matchListDiv = document.getElementById('matchListDiv');
 
 //setup before functions
 let typingTimer;                //timer identifier
-let doneTypingInterval = 400;  //time in ms (5 seconds)
+let doneTypingInterval = 400;  //time in ms
 let myInput = document.getElementById('search');
 
 //on keyup, start the countdown
