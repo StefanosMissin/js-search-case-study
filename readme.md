@@ -29,7 +29,7 @@ A regular expression is created to match user's search value with data given. Ou
         return resMatch.name.match(regex);
     });`
     
-A function named outputHtml is called so we can pass our array to html elements. We create an arrow function to map our array as new elements on a selected element. (In this case an <ul> with an id="matchList")
+A function named outputHtml is called so we can pass our array to html elements. We create an arrow function to map our array as new elements on a selected element. (In this case an **<ul>** with an id="matchList")
    
    `
    const outputHtml = matches => {
