@@ -29,7 +29,7 @@ A regular expression is created to match user's search value with data given. Ou
         return resMatch.name.match(regex);
     });`
     
-A function named outputHtml is called so we can pass our array to html elements. We create an arrow function to map our array as new elements on a selected element. (In this case an **ul** with an id="matchList")
+A function named outputHtml is called so we can pass our array to html elements. I created an arrow function to map the array as new elements on a selected element. (In this case an **ul** with an id="matchList")
    
    `
    const outputHtml = matches => {
@@ -43,4 +43,6 @@ A function named outputHtml is called so we can pass our array to html elements.
     }
 };`
 
-Also on new <li> items there is an onClick attribute so when user clicks on a result it's value is passed to the search area. If user clicks the **Click to Search** button a google search with the value of the result is given.
+Also on new **li** items there is an onClick attribute so when user clicks on a result it's value is passed to the search area. If user clicks the **Click to Search** button a google search with the value of the result is given. (The results are deleted from the **ul** )
+
+
