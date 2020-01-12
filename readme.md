@@ -19,3 +19,33 @@ Another parameter is the width of the screen so we can narrow down the results c
     
 Now, a query to our service is created with 3 parameters. Our user's search value, browser language and results count.
 `let link = http://35.180.182.8/search?keywords=${search.value}&language=${langRes}&limit=${limitRes};`
+
+
+A regular expression is created to match user's search value with data given. Our data return as an array.
+
+`    // Get matches to current text input
+    let matches = resList.entries.filter(resMatch => {
+        const regex = new RegExp(${searchText}, 'gi');
+        return resMatch.name.match(regex);
+    });`
+    
+A function named outputHtml is called so we can pass our array to html elements. We create an arrow function to map our array as new elements on a selected element. (In this case an <ul> with an id="matchList")
+   
+   `
+   const outputHtml = matches => {
+    if (matches.length > 0) {
+
+        const html = matches.map(match => 
+        <li onclick="changeSearchText('${match.name}')" class="mb-2 mt-2">
+            ${match.name}
+        </li>
+        ).join('');
+
+        matchList.innerHTML = html;
+
+
+
+    }
+};`
+
+Also on new <li> items there is an onClick attribute so when user clicks on a result it's value is passed to the search area. If user clicks the **Click to Search** button a google search with the value of the result is given.
